@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/appleNewsFragment"
+        android:name="com.example.latestnews.fragments.AppleNewsFragment"
+        android:label="fragment_apple_news"
+        tools:layout="@layout/fragment_apple_news" />
+    <fragment
+        android:id="@+id/bitcoinNewsFragment"
+        android:name="com.example.latestnews.fragments.BitcoinNewsFragment"
+        android:label="fragment_bitcoin_news"
+        tools:layout="@layout/fragment_bitcoin_news" />
+    <fragment
+        android:id="@+id/businessNewsFragment"
+        android:name="com.example.latestnews.fragments.BusinessNewsFragment"
+        android:label="fragment_business_news"
+        tools:layout="@layout/fragment_business_news" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.latestnews.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_appleNewsFragment"
+            app:destination="@id/appleNewsFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_mainFragment_to_bitcoinNewsFragment"
+            app:destination="@id/bitcoinNewsFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_mainFragment_to_techCrunchNewsFragment"
+            app:destination="@id/techCrunchNewsFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_mainFragment_to_businessNewsFragment"
+            app:destination="@id/businessNewsFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_mainFragment_to_wallStreetNewsFragment"
+            app:destination="@id/wallStreetNewsFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/techCrunchNewsFragment"
+        android:name="com.example.latestnews.fragments.TechCrunchNewsFragment"
+        android:label="fragment_tech_crunch_news"
+        tools:layout="@layout/fragment_tech_crunch_news" />
+    <fragment
+        android:id="@+id/wallStreetNewsFragment"
+        android:name="com.example.latestnews.fragments.WallStreetNewsFragment"
+        android:label="fragment_wall_street_news"
+        tools:layout="@layout/fragment_wall_street_news" />
+</navigation>
